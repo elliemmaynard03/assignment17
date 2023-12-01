@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Countries</h1>
+        <a href="#" id="add-link">+</a>
+    </header>
+
+    <div class="columns two-columns">
+        <div id="country-list" class="columns"></div>
+        <div id="country-details-column">
+            <h2>Country Information</h2>
+
+            <div id="country-details"></div>
+        </div>
+    </div>
+    <div id="add-edit-country-container" class="dialog transparent">
+        <span class="close">&times;</span>
+
+        <h3 id="add-edit-title">Country</h3>
+        <form id="add-edit-country-form" method="post">
+            <input type="text" name="_id" value="-1" />
+            <p>
+                <label for="name ">Country Name:</label>
+                <input type="text" id="name" name="name" required />
+            </p>
+            <p>
+                <label for="capitol">Capitol:</label>
+                <input type="text" id="capitol" name="capitol" required />
+            </p>
+            <p>
+                <label for="president">President:</label>
+                <input type="text" id="president" name="president" required />
+            </p>
+            <p>
+                <label for="population">Population:</label>
+                <input type="text" id="population" name="population" required />
+            </p>
+            <p>
+                <label for="origin">Origin:</label>
+                <input type="text" id="origin" name="origin" required />
+            </p>
+            <p>
+                <label for="language">Language:</label>
+                <input type="text" id="language" name="language" required />
+            </p>
+
+            <p>
+                <label for="img">Upload Image:</label>
+                <input type="file" id="img" name="img" />
+            </p>
+
+            <p id="funfacts-p ">
+                <label class="inline">Funfacts:</label>
+                <a href="#" id="add-funfact">Add Funfact</a>
+                <section id="funfact-boxes"></section>
+            </p>
+            <p>
+                <button type="submit">Submit</button>
+            </p>
+            <div id="success-message" style="display: none;">Success! Your Form Was Submitted.</div>
+            <div id="error-message" style="display: none; color: red;">Error! Your Form Was Not Submitted Correctly.</div>
+        </form>
+    </div>
+</body>
+
+</html>
